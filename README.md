@@ -13,17 +13,16 @@
 
 <br>
 
-<img src="https://github.com/dbolanos-s/dbolanos-s/blob/main/WhatsApp%20Image%202026-04-10%20at%2022.43.24-modified.png?raw=true" width="300" style="border-radius:50%"/>
+![](https://capsule-render.vercel.app/api?type=cylinder&color=0:0f0c29,100:302b63&height=100&text=dbolanos-s&fontSize=50&fontColor=ffffff&animation=fadeIn)
 
+<br>
 
-### 👩‍💻 DOMENICA BOLAÑOS
-
-<img src="https://img.shields.io/badge/ESPOL-Universidad-6366f1?style=flat-square&labelColor=0f0c29"/>
-<img src="https://img.shields.io/badge/Guayaquil-Ecuador-22d3ee?style=flat-square&labelColor=0f0c29"/>
+<img src="https://img.shields.io/badge/ESPOL-Universidad-6366f1?style=for-the-badge&labelColor=0f0c29"/>
+<img src="https://img.shields.io/badge/Guayaquil-Ecuador-22d3ee?style=for-the-badge&labelColor=0f0c29"/>
 
 <br><br>
 
-![](https://img.shields.io/badge/📅_2023–2028-Ingeniería_en_CC-a78bfa?style=for-the-badge&labelColor=1e1b4b)
+![](https://img.shields.io/badge/📅_2023–2028-Ingeniería_en_Ciencias_Computacionales-a78bfa?style=for-the-badge&labelColor=1e1b4b)
 
 <br><br>
 
@@ -33,12 +32,18 @@
 
 ```python
 focus = [
-  "Data Science",
-  "Artificial Intelligence",
-  "Databases",
-  "Object-Oriented Programming"
+  "Full Stack Development",
+  "DevOps",
+  "Cloud Computing",
+  "Data Analysis"
 ]
 ```
+
+---
+
+### ⚙️ Tech Stack
+
+<img src="https://skillicons.dev/icons?i=python,java,js,html,css,mysql,react,nodejs,aws&theme=dark" />
 
 ---
 
@@ -63,7 +68,7 @@ focus = [
 
 <p>
 Soy estudiante de Ingeniería en Ciencias de la Computación en <b>ESPOL (Escuela Superior Politécnica del Litoral)</b>,
-actualmente cursando mi <b>6to semestre</b> de 9. Comencé mi carrera en <b>2023</b>, donde di mis primeros
+actualmente cursando mi <b>6to semestre</b> de 10. Comencé mi carrera en <b>2023</b>, donde di mis primeros
 pasos en la programación a través de <b>Python</b>, aprendiendo conceptos fundamentales como lógica,
 estructuras de control y descomposición de problemas que se convirtieron en la base de todo lo que hago hoy.
 
@@ -88,12 +93,6 @@ concepto explorado es un paso hacia convertirme en la ingeniera que estoy trabaj
 Siempre aprendiendo, siempre construyendo, siempre avanzando.
 </p>
 
-
-
-### ⚙️ Tech Stack
-
-<img src="https://skillicons.dev/icons?i=python,java,js,html,css,mysql&theme=dark" />
-
 ---
 
 ### 🧩 Skills Overview
@@ -114,6 +113,14 @@ Siempre aprendiendo, siempre construyendo, siempre avanzando.
 - Object-Oriented Programming
 - Algorithms & Logic
 - Web Development
+
+</td>
+<td>
+
+**☁️ Cloud & DevOps**
+- AWS / GCP / Azure
+- CI/CD Pipelines
+- Infrastructure basics
 
 </td>
 </tr>
@@ -173,6 +180,13 @@ Proyecto Java enfocado en implementar estructuras de datos y algoritmos para res
 
 ## 📊 GitHub Stats
 
+<div align="center">
+
+<img height="160" src="https://github-readme-stats.vercel.app/api?username=dbolanos-s&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=a78bfa&icon_color=22d3ee&text_color=c9d1d9&ring_color=6366f1"/>
+&nbsp;&nbsp;
+<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=dbolanos-s&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=a78bfa&text_color=c9d1d9"/>
+
+</div>
 
 <div align="center">
 
@@ -190,6 +204,7 @@ Proyecto Java enfocado en implementar estructuras de datos y algoritmos para res
 > desarrollo web con React y Node.js. A largo plazo, aspiro a dominar infraestructuras en la nube con
 > **AWS, GCP y Azure**, automatizar procesos mediante prácticas DevOps y colaborar en equipos de desarrollo
 > que construyan productos robustos y de calidad. Este perfil es el inicio de ese camino."*
+
 ---
 
 <div align="center">
