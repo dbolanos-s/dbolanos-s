@@ -32,7 +32,8 @@
 
 ```python
 focus = [
-  "Full Stack Development",
+  "Machine Learning",
+"Data science",
   "DevOps",
   "Cloud Computing",
   "Data Analysis"
@@ -41,7 +42,7 @@ focus = [
 
 ---
 
-### ⚙️ Tech Stack
+###  Tech Stack
 
 <img src="https://skillicons.dev/icons?i=python,java,js,html,css,mysql,react,nodejs,aws&theme=dark" />
 
@@ -66,36 +67,26 @@ focus = [
 
 ---
 
-<p>
-Soy estudiante de Ingeniería en Ciencias de la Computación en <b>ESPOL (Escuela Superior Politécnica del Litoral)</b>,
-actualmente cursando mi <b>6to semestre</b> de 10. Comencé mi carrera en <b>2023</b>, donde di mis primeros
-pasos en la programación a través de <b>Python</b>, aprendiendo conceptos fundamentales como lógica,
-estructuras de control y descomposición de problemas que se convirtieron en la base de todo lo que hago hoy.
+<p> Soy estudiante de Ingeniería en Ciencias de la Computación en <b>ESPOL</b>, actualmente en <b>6to semestre</b>.
 
-A lo largo de mi carrera, profundicé en los aspectos teóricos y prácticos de las ciencias de la computación.
-En <b>Estructuras de Datos</b> aprendí a pensar en eficiencia y manejo de memoria. En <b>Bases de Datos</b>
-adquirí la capacidad de diseñar, consultar y gestionar sistemas relacionales usando <b>SQL y MySQL</b>.
-<b>Estadística</b> me abrió las puertas al análisis de datos, cómo interpretarlos, visualizarlos
-y extraer conclusiones significativas de ellos.
+De forma paralela a mi formación académica, me he especializado <b>de manera autodidacta</b> en
+<b>Data Science, Machine Learning y Análisis de Datos</b>, enfocándome en el uso práctico de datos
+para la toma de decisiones.
 
-Más allá del aula, he estado expandiendo mis habilidades hacia tecnologías modernas. He explorado
-<b>React y Node.js</b> para el desarrollo de aplicaciones web dinámicas, y he comenzado a familiarizarme
-con plataformas en la nube como <b>AWS, GCP y Azure</b>, comprendiendo cómo funcionan la infraestructura,
-el despliegue y la escalabilidad en entornos reales.
+Trabajo con <b>Python y SQL</b> para el procesamiento y análisis de datos. Utilizo <b>Jupyter Notebook</b>
+para análisis exploratorio (EDA) y modelado, y <b>Power BI</b> para la construcción de dashboards
+interactivos y visualizaciones orientadas a negocio.
 
-Mi camino es claro: quiero crecer como una ingeniera versátil enfocada en
-<b>Desarrollo Full Stack</b>, construyendo aplicaciones de extremo a extremo con código limpio y mantenible,
-<b>DevOps</b>, automatizando flujos de trabajo y mejorando los procesos de despliegue,
-y <b>Cloud Computing</b>, diseñando sistemas escalables y resilientes en infraestructura moderna.
+He aplicado librerías como <b>Pandas, NumPy y Scikit-learn</b> en problemas de análisis,
+regresión y clasificación, desarrollando una base sólida en el manejo de datos.
 
-Este perfil es un reflejo de mi camino de aprendizaje. Cada proyecto, cada línea de código y cada
-concepto explorado es un paso hacia convertirme en la ingeniera que estoy trabajando por ser.
-Siempre aprendiendo, siempre construyendo, siempre avanzando.
+Mi enfoque está en analizar datos de forma estructurada, generar insights claros
+y construir visualizaciones que aporten valor real.
+
 </p>
-
 ---
 
-### 🧩 Skills Overview
+###  Skills Overview
 
 <table>
 <tr>
@@ -132,7 +123,7 @@ Siempre aprendiendo, siempre construyendo, siempre avanzando.
 
 ---
 
-## 🚀 Featured Projects
+##  Featured Projects
 
 <table width="100%">
 <tr>
@@ -178,7 +169,7 @@ Proyecto Java enfocado en implementar estructuras de datos y algoritmos para res
 
 ---
 
-## 📊 GitHub Stats
+##  GitHub Stats
 
 <div align="center">
 
@@ -196,7 +187,7 @@ Proyecto Java enfocado en implementar estructuras de datos y algoritmos para res
 
 ---
 
-## 🎯 Professional Vision
+##  Professional Vision
 
 > *"Mi meta es crecer como ingeniera especializada en **Desarrollo Full Stack, DevOps y Cloud Computing**,
 > construyendo soluciones tecnológicas escalables que generen impacto real. Comencé mi camino en 2023
