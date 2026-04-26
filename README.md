@@ -97,8 +97,8 @@ domenica = {
 
 | 🌱 Net Zero Green Corridors | 🎮 Juego Matemáticas Discretas | 🧱 Estructuras de Datos |
 |:---|:---|:---|
-| Sistema geoespacial con datos satelitales para analizar corredores sostenibles e impacto ambiental | App interactiva en Python para aplicar grafos, lógica y combinatoria en entorno educativo | Estructuras y algoritmos eficientes para resolver problemas computacionales en Java |
-| ![Python](https://img.shields.io/badge/Python-3572A5?style=flat-square&logo=python&logoColor=white) | ![Python](https://img.shields.io/badge/Python-3572A5?style=flat-square&logo=python&logoColor=white) | ![Java](https://img.shields.io/badge/Java-f89820?style=flat-square&logo=openjdk&logoColor=white) |
+| Sistema geoespacial con datos satelitales para analizar corredores sostenibles e impacto ambiental | App interactiva en Python para aplicar grafos, lógica y combinatoria en entorno educativo | El proyecto EcoTrack es un sistema de gestión ambiental desarrollado en Java que permite registrar, organizar y monitorear residuos para optimizar su recolección y reciclaje.|
+| ![JavaScript](https://img.shields.io/badge/JavaScript-f7df1e?style=for-the-badge&logo=javascript&logoColor=black) | ![Python](https://img.shields.io/badge/Python-3572A5?style=flat-square&logo=python&logoColor=white) | ![Java](https://img.shields.io/badge/Java-f89820?style=flat-square&logo=openjdk&logoColor=white) |
 | [Ver Repo →](https://github.com/dbolanos-s/net-zero-green-corridors) | [Ver Repo →](https://github.com/dbolanos-s/Juego-Interactivo-aplicando-Matem-ticas-Discretas) | [Ver Repo →](https://github.com/dbolanos-s/Proyecto-Estructura-de-Datos-Grupo-04) |
 
 </div>
