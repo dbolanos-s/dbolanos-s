@@ -19,7 +19,7 @@
 ![ESPOL](https://img.shields.io/badge/ESPOL-Universidad-818cf8?style=for-the-badge&labelColor=e0e7ff)
 ![Semestre](https://img.shields.io/badge/6to-Semestre-a78bfa?style=for-the-badge&labelColor=ede9fe)
 ![Ecuador](https://img.shields.io/badge/Guayaquil-Ecuador-60a5fa?style=for-the-badge&labelColor=dbeafe)
-![Modo](https://img.shields.io/badge/Modo-Autodidacta-34d399?style=for-the-badge&labelColor=d1fae5)
+![Modo de aprendizaje](https://img.shields.io/badge/Modo-Autodidacta-34d399?style=for-the-badge&labelColor=d1fae5)
 
 </div>
 
