@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Doménica Bolaños</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <style>
     :root {
       --bg:        #0f0e17;
@@ -21,19 +21,17 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
 
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-weight: 300;
       line-height: 1.7;
       overflow-x: hidden;
     }
 
-    /* NAV */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; justify-content: center; gap: 2rem;
@@ -49,7 +47,6 @@
     }
     nav a:hover { color: var(--soft); }
 
-    /* HERO */
     .hero {
       min-height: 100vh;
       display: flex; flex-direction: column;
@@ -78,8 +75,9 @@
       animation: fadeUp 0.6s ease both;
     }
     .hero h1 {
-      font-family: 'DM Serif Display', serif;
+      font-family: 'Outfit', sans-serif;
       font-size: clamp(2.8rem, 8vw, 5.5rem);
+      font-weight: 700;
       line-height: 1.05;
       letter-spacing: -0.02em;
       background: linear-gradient(135deg, #e0e7ff 0%, var(--soft) 50%, var(--indigo) 100%);
@@ -107,7 +105,6 @@
     }
     .badge.green { color: var(--accent); border-color: rgba(52,211,153,0.3); }
 
-    /* SECTIONS */
     section {
       max-width: 900px; margin: 0 auto;
       padding: 5rem 2rem;
@@ -117,13 +114,13 @@
       color: var(--violet-lt); margin-bottom: 0.5rem;
     }
     h2 {
-      font-family: 'DM Serif Display', serif;
+      font-family: 'Outfit', sans-serif;
       font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-weight: 600;
       color: var(--text); margin-bottom: 1.5rem;
     }
     p { color: var(--muted); margin-bottom: 1rem; }
 
-    /* CODE BLOCK */
     .code-block {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -140,21 +137,39 @@
     .code-block .str { color: #f9a8d4; }
 
     /* TECH GRID */
-    .tech-group { margin-bottom: 2rem; }
-    .tech-group h3 {
-      font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--muted); margin-bottom: 0.8rem;
+    .tech-group { margin-bottom: 2.5rem; }
+    .tech-group-header {
+      display: flex; align-items: center; gap: 0.6rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
     }
-    .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .chip {
+    .tech-group-header h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.9rem; font-weight: 600;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      color: var(--soft);
+    }
+    .tech-items { display: flex; flex-direction: column; gap: 0.6rem; }
+    .tech-item {
+      display: flex; align-items: flex-start; gap: 1rem;
       background: var(--card);
       border: 1px solid var(--border);
-      color: var(--text);
-      font-size: 0.82rem; padding: 0.35rem 0.85rem;
-      border-radius: 8px;
-      transition: border-color 0.2s, color 0.2s;
+      border-radius: 10px;
+      padding: 0.8rem 1rem;
+      transition: border-color 0.2s;
     }
-    .chip:hover { border-color: var(--violet-lt); color: var(--soft); }
+    .tech-item:hover { border-color: var(--violet-lt); }
+    .tech-item img { height: 22px; flex-shrink: 0; margin-top: 2px; }
+    .tech-item-info { flex: 1; }
+    .tech-item-info strong {
+      display: block;
+      font-size: 0.88rem; font-weight: 500; color: var(--text);
+      margin-bottom: 0.15rem;
+    }
+    .tech-item-info span {
+      font-size: 0.78rem; color: var(--muted);
+    }
 
     /* PROJECTS */
     .projects-grid {
@@ -177,16 +192,21 @@
     }
     .project-card .icon { font-size: 1.6rem; margin-bottom: 0.8rem; }
     .project-card h3 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.05rem; color: var(--text); margin-bottom: 0.5rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem; font-weight: 600;
+      color: var(--text); margin-bottom: 0.5rem;
     }
     .project-card p { font-size: 0.85rem; color: var(--muted); margin: 0 0 1rem; }
     .project-lang {
       display: flex; flex-wrap: wrap; gap: 0.4rem;
       margin-top: 0.8rem;
     }
-    .project-lang img {
-      height: 22px;
+    .project-lang img { height: 22px; }
+    .project-link {
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      margin-top: 0.8rem;
+      font-size: 0.78rem; color: var(--violet-lt);
+      letter-spacing: 0.05em;
     }
 
     /* INTERESTS */
@@ -204,17 +224,18 @@
     }
     .interest-card:hover { border-color: var(--soft); }
     .interest-card .ico { font-size: 1.4rem; margin-bottom: 0.5rem; }
-    .interest-card h3 { font-size: 0.9rem; color: var(--text); margin-bottom: 0.3rem; }
+    .interest-card h3 {
+      font-size: 0.9rem; font-weight: 500;
+      color: var(--text); margin-bottom: 0.3rem;
+    }
     .interest-card p { font-size: 0.78rem; color: var(--muted); margin: 0; }
 
-    /* DIVIDER */
     .divider {
       border: none;
       border-top: 1px solid var(--border);
       margin: 0 2rem;
     }
 
-    /* FOOTER */
     footer {
       text-align: center;
       padding: 3rem 2rem;
@@ -225,7 +246,6 @@
     footer a { color: var(--violet-lt); text-decoration: none; }
     footer a:hover { color: var(--soft); }
 
-    /* ANIMATIONS */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -239,14 +259,13 @@
 </head>
 <body>
 
-  <!-- NAV -->
   <nav>
     <a href="#sobre-mi">Información</a>
     <a href="#proyectos">Proyectos</a>
+    <a href="#tecnologias">Tecnologías</a>
     <a href="#intereses">Intereses</a>
   </nav>
 
-  <!-- HERO -->
   <div class="hero">
     <span class="hero-tag">Portafolio Personal</span>
     <h1>Doménica Bolaños</h1>
@@ -262,12 +281,12 @@
 
   <hr class="divider"/>
 
-  <!-- INFORMACIÓN PERSONAL -->
+  <!-- 01 INFORMACIÓN PERSONAL -->
   <section id="sobre-mi" class="reveal">
     <p class="section-label">01 — Información personal</p>
     <h2>Sobre mí</h2>
     <p>Soy estudiante de <strong style="color:var(--soft)">Ingeniería en Computación</strong> en ESPOL (Escuela Superior Politécnica del Litoral), cursando el 6to semestre en la facultad FIEC.</p>
-    <p>Cuento con conocimientos en Python, Java, JavaScript, HTML/CSS, MySQL y MongoDB, lo que me permite tener una base tanto en desarrollo de software como en manejo de datos. Mi principal enfoque es <strong style="color:var(--soft)">Data Science y Machine Learning</strong>, donde trabajo con Pandas, NumPy, Scikit-learn, Jupyter Notebook y Power BI.</p>
+    <p>Cuento con conocimientos en Python, Java, JavaScript, HTML/CSS, MySQL y MongoDB. Mi principal enfoque es <strong style="color:var(--soft)">Data Science y Machine Learning</strong>, donde trabajo con Pandas, NumPy, Scikit-learn, Jupyter Notebook y Power BI para análisis, modelado y visualización de datos.</p>
 
     <div class="code-block">
 <span class="key">domenica</span> = {<br>
@@ -279,47 +298,11 @@
 &nbsp;&nbsp;<span class="str">"meta"</span>        : <span class="val">"Científica de Datos aplicada a proyectos reales"</span><br>
 }
     </div>
-
-    <!-- TECH STACK -->
-    <div style="margin-top:3rem">
-      <div class="tech-group">
-        <h3>Lenguajes</h3>
-        <div class="chips">
-          <span class="chip">Python</span>
-          <span class="chip">Java</span>
-          <span class="chip">JavaScript</span>
-          <span class="chip">SQL</span>
-          <span class="chip">HTML5</span>
-          <span class="chip">CSS3</span>
-        </div>
-      </div>
-      <div class="tech-group">
-        <h3>Data Science & ML</h3>
-        <div class="chips">
-          <span class="chip">Pandas</span>
-          <span class="chip">NumPy</span>
-          <span class="chip">Scikit-learn</span>
-          <span class="chip">Matplotlib</span>
-          <span class="chip">Jupyter Notebook</span>
-          <span class="chip">Power BI</span>
-        </div>
-      </div>
-      <div class="tech-group">
-        <h3>Cloud & Herramientas</h3>
-        <div class="chips">
-          <span class="chip">AWS</span>
-          <span class="chip">Azure</span>
-          <span class="chip">GCP</span>
-          <span class="chip">Git</span>
-          <span class="chip">GitHub</span>
-        </div>
-      </div>
-    </div>
   </section>
 
   <hr class="divider"/>
 
-  <!-- PROYECTOS -->
+  <!-- 02 PROYECTOS -->
   <section id="proyectos" class="reveal">
     <p class="section-label">02 — Proyectos</p>
     <h2>Proyectos Destacados</h2>
@@ -334,6 +317,7 @@
           <img src="https://img.shields.io/badge/HTML5-e34f26?style=flat-square&logo=html5&logoColor=white" alt="HTML5"/>
           <img src="https://img.shields.io/badge/CSS3-1572b6?style=flat-square&logo=css3&logoColor=white" alt="CSS3"/>
         </div>
+        <span class="project-link">Ver repositorio →</span>
       </a>
 
       <a class="project-card" href="https://github.com/dbolanos-s/Juego-Interactivo-aplicando-Matem-ticas-Discretas" target="_blank">
@@ -343,6 +327,7 @@
         <div class="project-lang">
           <img src="https://img.shields.io/badge/Python-3572A5?style=flat-square&logo=python&logoColor=white" alt="Python"/>
         </div>
+        <span class="project-link">Ver repositorio →</span>
       </a>
 
       <a class="project-card" href="https://github.com/dbolanos-s/Proyecto-Estructura-de-Datos-Grupo-04" target="_blank">
@@ -352,6 +337,7 @@
         <div class="project-lang">
           <img src="https://img.shields.io/badge/Java-f89820?style=flat-square&logo=openjdk&logoColor=white" alt="Java"/>
         </div>
+        <span class="project-link">Ver repositorio →</span>
       </a>
 
       <a class="project-card" href="https://github.com/dbolanos-s/ml-denuncias-consumidor" target="_blank">
@@ -363,6 +349,7 @@
           <img src="https://img.shields.io/badge/Scikit--learn-f7931e?style=flat-square&logo=scikit-learn&logoColor=white" alt="Scikit-learn"/>
           <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="Pandas"/>
         </div>
+        <span class="project-link">Ver repositorio →</span>
       </a>
 
     </div>
@@ -370,9 +357,126 @@
 
   <hr class="divider"/>
 
-  <!-- INTERESES -->
+  <!-- 03 TECNOLOGÍAS -->
+  <section id="tecnologias" class="reveal">
+    <p class="section-label">03 — Tecnologías</p>
+    <h2>Stack Tecnológico</h2>
+    <p>Herramientas, lenguajes y frameworks aprendidos durante el curso y aplicados en proyectos reales.</p>
+
+    <div class="tech-group">
+      <div class="tech-group-header">
+        <h3>Lenguajes de Programación</h3>
+      </div>
+      <div class="tech-items">
+        <div class="tech-item">
+          <img src="https://img.shields.io/badge/Python-3572A5?style=flat-square&logo=python&logoColor=white" alt="Python"/>
+          <div class="tech-item-info">
+            <strong>Python</strong>
+            <span>Lenguaje principal para análisis de datos, machine learning y automatización. Usado en el proyecto de clasificación de denuncias y juego de matemáticas discretas.</span>
+          </div>
+        </div>
+        <div class="tech-item">
+          <img src="https://img.shields.io/badge/Java-f89820?style=flat-square&logo=openjdk&logoColor=white" alt="Java"/>
+          <div class="tech-item-info">
+            <strong>Java</strong>
+            <span>Desarrollo de aplicaciones orientadas a objetos. Aplicado en EcoTrack para implementar estructuras de datos como árboles y listas enlazadas.</span>
+          </div>
+        </div>
+        <div class="tech-item">
+          <img src="https://img.shields.io/badge/JavaScript-f7df1e?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript"/>
+          <div class="tech-item-info">
+            <strong>JavaScript</strong>
+            <span>Desarrollo web frontend e interactividad. Utilizado en Net Zero Green Corridors para visualización geoespacial de datos satelitales.</span>
+          </div>
+        </div>
+        <div class="tech-item">
+          <img src="https://img.shields.io/badge/HTML5-e34f26?style=flat-square&logo=html5&logoColor=white" alt="HTML5"/>
+          <div class="tech-item-info">
+            <strong>HTML5 & CSS3</strong>
+            <span>Estructura y diseño de interfaces web. Base del desarrollo frontend en proyectos web y portafolio personal.</span>
+          </div>
+        </div>
+        <div class="tech-item">
+          <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="SQL"/>
+          <div class="tech-item-info">
+            <strong>SQL</strong>
+            <span>Gestión y consulta de bases de datos relacionales. Aplicado en proyectos con MySQL para almacenamiento y recuperación de datos.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-group">
+      <div class="tech-group-header">
+        <h3>Data Science & Machine Learning</h3>
+      </div>
+      <div class="tech-items">
+        <div class="tech-item">
+          <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="Pandas"/>
+          <div class="tech-item-info">
+            <strong>Pandas</strong>
+            <span>Manipulación y análisis de datos tabulares. Usado para limpiar, transformar y explorar el dataset de 33,052 denuncias de consumidores.</span>
+          </div>
+        </div>
+        <div class="tech-item">
+          <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" alt="NumPy"/>
+          <div class="tech-item-info">
+            <strong>NumPy</strong>
+            <span>Operaciones matemáticas y manejo de arrays multidimensionales. Base del procesamiento numérico en modelos de ML.</span>
+          </div>
+        </div>
+        <div class="tech-item">
+          <img src="https://img.shields.io/badge/Scikit--learn-f7931e?style=flat-square&logo=scikit-learn&logoColor=white" alt="Scikit-learn"/>
+          <div class="tech-item-info">
+            <strong>Scikit-learn</strong>
+            <span>Librería principal para machine learning. Aplicada para entrenar modelos de clasificación supervisada en el proyecto de predicción de denuncias.</span>
+          </div>
+        </div>
+        <div class="tech-item">
+          <img src="https://img.shields.io/badge/Jupyter-f37626?style=flat-square&logo=jupyter&logoColor=white" alt="Jupyter"/>
+          <div class="tech-item-info">
+            <strong>Jupyter Notebook</strong>
+            <span>Entorno interactivo para exploración y análisis de datos (EDA). Permite combinar código, visualizaciones y documentación en un solo lugar.</span>
+          </div>
+        </div>
+        <div class="tech-item">
+          <img src="https://img.shields.io/badge/Power%20BI-f2c811?style=flat-square&logo=powerbi&logoColor=black" alt="Power BI"/>
+          <div class="tech-item-info">
+            <strong>Power BI</strong>
+            <span>Creación de dashboards interactivos e interpretación de resultados. Usado para visualizar métricas y KPIs en proyectos de análisis de datos.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-group">
+      <div class="tech-group-header">
+        <h3>Cloud & Herramientas</h3>
+      </div>
+      <div class="tech-items">
+        <div class="tech-item">
+          <img src="https://img.shields.io/badge/Git-f05032?style=flat-square&logo=git&logoColor=white" alt="Git"/>
+          <div class="tech-item-info">
+            <strong>Git & GitHub</strong>
+            <span>Control de versiones y colaboración en proyectos. Utilizado para gestionar el historial de cambios, ramas y despliegue con GitHub Pages.</span>
+          </div>
+        </div>
+        <div class="tech-item">
+          <img src="https://img.shields.io/badge/AWS-232f3e?style=flat-square&logo=amazonaws&logoColor=white" alt="AWS"/>
+          <div class="tech-item-info">
+            <strong>AWS / Azure / GCP</strong>
+            <span>Exploración de servicios cloud para cómputo, almacenamiento y despliegue de aplicaciones. Aprendidos a través de AWS Educate, Microsoft Learn y Google Skills Boost.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- 04 INTERESES -->
   <section id="intereses" class="reveal">
-    <p class="section-label">03 — Intereses</p>
+    <p class="section-label">04 — Intereses</p>
     <h2>Áreas de Interés</h2>
     <div class="interests-grid">
       <div class="interest-card">
@@ -408,7 +512,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <p>Doménica Bolaños · Guayaquil, Ecuador</p>
     <p style="margin-top:0.5rem">
