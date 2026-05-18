@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Doménica Bolaños</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg:        #0f0e17;
+      --surface:   #1a1830;
+      --card:      #211f38;
+      --border:    #2e2b50;
+      --violet:    #7c3aed;
+      --violet-lt: #a78bfa;
+      --indigo:    #818cf8;
+      --soft:      #c4b5fd;
+      --text:      #e0e7ff;
+      --muted:     #8b87b8;
+      --accent:    #34d399;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: center; gap: 2rem;
+      padding: 1rem 2rem;
+      background: rgba(15,14,23,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav a {
+      color: var(--muted); text-decoration: none;
+      font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--soft); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 20%, rgba(124,58,237,0.25) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 30% at 80% 70%, rgba(129,140,248,0.15) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(124,58,237,0.15);
+      border: 1px solid rgba(124,58,237,0.4);
+      color: var(--soft);
+      font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 0.35rem 1rem; border-radius: 999px;
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.6s ease both;
+    }
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.8rem, 8vw, 5.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #e0e7ff 0%, var(--soft) 50%, var(--indigo) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      animation: fadeUp 0.7s 0.1s ease both;
+    }
+    .hero-sub {
+      margin-top: 1rem;
+      color: var(--muted); font-size: 1.1rem;
+      animation: fadeUp 0.7s 0.2s ease both;
+    }
+    .hero-badges {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem;
+      margin-top: 2rem;
+      animation: fadeUp 0.7s 0.3s ease both;
+    }
+    .badge {
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--soft);
+      font-size: 0.78rem; padding: 0.3rem 0.9rem;
+      border-radius: 999px; letter-spacing: 0.05em;
+    }
+    .badge.green { color: var(--accent); border-color: rgba(52,211,153,0.3); }
+
+    /* SECTIONS */
+    section {
+      max-width: 900px; margin: 0 auto;
+      padding: 5rem 2rem;
+    }
+    .section-label {
+      font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--violet-lt); margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      color: var(--text); margin-bottom: 1.5rem;
+    }
+    p { color: var(--muted); margin-bottom: 1rem; }
+
+    /* CODE BLOCK */
+    .code-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      font-family: 'Fira Code', 'Courier New', monospace;
+      font-size: 0.85rem;
+      color: var(--soft);
+      overflow-x: auto;
+      margin-top: 2rem;
+    }
+    .code-block .key { color: var(--indigo); }
+    .code-block .val { color: var(--accent); }
+    .code-block .str { color: #f9a8d4; }
+
+    /* TECH GRID */
+    .tech-group { margin-bottom: 2rem; }
+    .tech-group h3 {
+      font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 0.8rem;
+    }
+    .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .chip {
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 0.82rem; padding: 0.35rem 0.85rem;
+      border-radius: 8px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .chip:hover { border-color: var(--violet-lt); color: var(--soft); }
+
+    /* PROJECTS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1rem;
+    }
+    .project-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem;
+      transition: border-color 0.25s, transform 0.25s;
+      text-decoration: none; color: inherit; display: block;
+    }
+    .project-card:hover {
+      border-color: var(--violet-lt);
+      transform: translateY(-3px);
+    }
+    .project-card .icon { font-size: 1.6rem; margin-bottom: 0.8rem; }
+    .project-card h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.05rem; color: var(--text); margin-bottom: 0.5rem;
+    }
+    .project-card p { font-size: 0.85rem; color: var(--muted); margin: 0 0 1rem; }
+    .project-lang {
+      font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--violet-lt);
+    }
+
+    /* INTERESTS */
+    .interests-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem; margin-top: 1rem;
+    }
+    .interest-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.2rem 1.5rem;
+      transition: border-color 0.2s;
+    }
+    .interest-card:hover { border-color: var(--soft); }
+    .interest-card .ico { font-size: 1.4rem; margin-bottom: 0.5rem; }
+    .interest-card h3 { font-size: 0.9rem; color: var(--text); margin-bottom: 0.3rem; }
+    .interest-card p { font-size: 0.78rem; color: var(--muted); margin: 0; }
+
+    /* DIVIDER */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0 2rem;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      color: var(--muted);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--violet-lt); text-decoration: none; }
+    footer a:hover { color: var(--soft); }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#sobre-mi">Información</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#intereses">Intereses</a>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <span class="hero-tag">Portafolio Personal</span>
+    <h1>Doménica Bolaños</h1>
+    <p class="hero-sub">Estudiante de Ingeniería en Computación · ESPOL · Guayaquil, Ecuador</p>
+    <div class="hero-badges">
+      <span class="badge">ESPOL — FIEC</span>
+      <span class="badge">6to Semestre</span>
+      <span class="badge">Data Science</span>
+      <span class="badge">Machine Learning</span>
+      <span class="badge green">Autodidacta</span>
+    </div>
+  </div>
+
+  <hr class="divider"/>
+
+  <!-- INFORMACIÓN PERSONAL -->
+  <section id="sobre-mi" class="reveal">
+    <p class="section-label">01 — Información personal</p>
+    <h2>Sobre mí</h2>
+    <p>Soy estudiante de <strong style="color:var(--soft)">Ingeniería en Computación</strong> en ESPOL (Escuela Superior Politécnica del Litoral), cursando el 6to semestre en la facultad FIEC.</p>
+    <p>Cuento con conocimientos en Python, Java, JavaScript, HTML/CSS, MySQL y MongoDB, lo que me permite tener una base tanto en desarrollo de software como en manejo de datos. Mi principal enfoque es <strong style="color:var(--soft)">Data Science y Machine Learning</strong>, donde trabajo con Pandas, NumPy, Scikit-learn, Jupyter Notebook y Power BI.</p>
+
+    <div class="code-block">
+<span class="key">domenica</span> = {<br>
+&nbsp;&nbsp;<span class="str">"universidad"</span> : <span class="val">"ESPOL — Ing. en Computación (FIEC)"</span>,<br>
+&nbsp;&nbsp;<span class="str">"semestre"</span>    : <span class="val">"6to"</span>,<br>
+&nbsp;&nbsp;<span class="str">"ubicacion"</span>   : <span class="val">"Guayaquil, Ecuador"</span>,<br>
+&nbsp;&nbsp;<span class="str">"enfoque"</span>     : [<span class="val">"Data Science"</span>, <span class="val">"Machine Learning"</span>, <span class="val">"Web Development"</span>],<br>
+&nbsp;&nbsp;<span class="str">"herramientas"</span>: [<span class="val">"Jupyter"</span>, <span class="val">"Power BI"</span>, <span class="val">"SQL"</span>, <span class="val">"Git"</span>],<br>
+&nbsp;&nbsp;<span class="str">"meta"</span>        : <span class="val">"Científica de Datos aplicada a proyectos reales"</span><br>
+}
+    </div>
+
+    <!-- TECH STACK -->
+    <div style="margin-top:3rem">
+      <div class="tech-group">
+        <h3>Lenguajes</h3>
+        <div class="chips">
+          <span class="chip">Python</span>
+          <span class="chip">Java</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">SQL</span>
+          <span class="chip">HTML5</span>
+          <span class="chip">CSS3</span>
+        </div>
+      </div>
+      <div class="tech-group">
+        <h3>Data Science & ML</h3>
+        <div class="chips">
+          <span class="chip">Pandas</span>
+          <span class="chip">NumPy</span>
+          <span class="chip">Scikit-learn</span>
+          <span class="chip">Matplotlib</span>
+          <span class="chip">Jupyter Notebook</span>
+          <span class="chip">Power BI</span>
+        </div>
+      </div>
+      <div class="tech-group">
+        <h3>Cloud & Herramientas</h3>
+        <div class="chips">
+          <span class="chip">AWS</span>
+          <span class="chip">Azure</span>
+          <span class="chip">GCP</span>
+          <span class="chip">Git</span>
+          <span class="chip">GitHub</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="reveal">
+    <p class="section-label">02 — Proyectos</p>
+    <h2>Proyectos Destacados</h2>
+    <div class="projects-grid">
+
+      <a class="project-card" href="https://github.com/dbolanos-s/net-zero-green-corridors" target="_blank">
+        <div class="icon">🌱</div>
+        <h3>Net Zero Green Corridors</h3>
+        <p>Sistema geoespacial con datos satelitales para analizar corredores sostenibles e impacto ambiental.</p>
+        <span class="project-lang">JavaScript</span>
+      </a>
+
+      <a class="project-card" href="https://github.com/dbolanos-s/Juego-Interactivo-aplicando-Matem-ticas-Discretas" target="_blank">
+        <div class="icon">🎮</div>
+        <h3>Juego Matemáticas Discretas</h3>
+        <p>App interactiva en Python para aplicar grafos, lógica y combinatoria en entorno educativo.</p>
+        <span class="project-lang">Python</span>
+      </a>
+
+      <a class="project-card" href="https://github.com/dbolanos-s/Proyecto-Estructura-de-Datos-Grupo-04" target="_blank">
+        <div class="icon">🧱</div>
+        <h3>EcoTrack — Estructuras de Datos</h3>
+        <p>Sistema de gestión ambiental en Java para registrar, organizar y monitorear residuos.</p>
+        <span class="project-lang">Java</span>
+      </a>
+
+      <a class="project-card" href="https://github.com/dbolanos-s/ml-denuncias-consumidor" target="_blank">
+        <div class="icon">📊</div>
+        <h3>ML Denuncias Consumidor</h3>
+        <p>Modelo de ML que predice el motivo de denuncias usando 33,052 registros reales con clasificación supervisada.</p>
+        <span class="project-lang">Python · Scikit-learn</span>
+      </a>
+
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- INTERESES -->
+  <section id="intereses" class="reveal">
+    <p class="section-label">03 — Intereses</p>
+    <h2>Áreas de Interés</h2>
+    <div class="interests-grid">
+      <div class="interest-card">
+        <div class="ico">📊</div>
+        <h3>Data Science</h3>
+        <p>Análisis, modelado y visualización de datos para toma de decisiones.</p>
+      </div>
+      <div class="interest-card">
+        <div class="ico">🤖</div>
+        <h3>Machine Learning</h3>
+        <p>Modelos de clasificación, regresión y análisis predictivo.</p>
+      </div>
+      <div class="interest-card">
+        <div class="ico">🔒</div>
+        <h3>Ciberseguridad</h3>
+        <p>Seguridad en dispositivos IoT aplicada a agricultura de precisión.</p>
+      </div>
+      <div class="interest-card">
+        <div class="ico">🌐</div>
+        <h3>Desarrollo Web</h3>
+        <p>Construcción de interfaces y aplicaciones web funcionales.</p>
+      </div>
+      <div class="interest-card">
+        <div class="ico">☁️</div>
+        <h3>Cloud Computing</h3>
+        <p>Exploración de servicios AWS, Azure y GCP.</p>
+      </div>
+      <div class="interest-card">
+        <div class="ico">📱</div>
+        <h3>Desarrollo Android</h3>
+        <p>Aplicaciones móviles con Java.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Doménica Bolaños · Guayaquil, Ecuador</p>
+    <p style="margin-top:0.5rem">
+      <a href="https://github.com/dbolanos-s" target="_blank">GitHub →</a>
+    </p>
+    <p style="margin-top:1rem; font-size:0.75rem; color:#4b4870">
+      "Los datos son el nuevo petróleo — pero solo si sabes refinarlos."
+    </p>
+  </footer>
+
+  <script>
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    reveals.forEach(r => observer.observe(r));
+  </script>
+
+</body>
+</html>
