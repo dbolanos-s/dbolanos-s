@@ -3,288 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="keywords" content="Doménica Bolaños, ingeniería en computación, ESPOL, data science, machine learning, portafolio, desarrolladora"/>
+  <meta name="keywords" content="Doménica Bolaños, ingeniería en computación, ESPOL, data science, machine learning, portafolio"/>
   <meta name="description" content="Portafolio personal de Doménica Bolaños, estudiante de Ingeniería en Computación en ESPOL, con enfoque en Data Science y Machine Learning."/>
   <meta name="author" content="Doménica Bolaños"/>
   <title>Doménica Bolaños — Portafolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  <style>
-    :root {
-      --bg:        #0f0e17;
-      --surface:   #1a1830;
-      --card:      #211f38;
-      --border:    #2e2b50;
-      --violet:    #7c3aed;
-      --violet-lt: #a78bfa;
-      --indigo:    #818cf8;
-      --soft:      #c4b5fd;
-      --text:      #e0e7ff;
-      --muted:     #8b87b8;
-      --accent:    #34d399;
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-weight: 300;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-
-    /* NAV */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; justify-content: center; gap: 2rem;
-      padding: 1rem 2rem;
-      background: rgba(15,14,23,0.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-    nav a {
-      color: var(--muted); text-decoration: none;
-      font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase;
-      transition: color 0.2s;
-    }
-    nav a:hover { color: var(--soft); }
-
-    /* HEADER */
-    header {
-      min-height: 100vh;
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      text-align: center;
-      padding: 6rem 2rem 4rem;
-      position: relative;
-      overflow: hidden;
-    }
-    header::before {
-      content: '';
-      position: absolute; inset: 0;
-      background:
-        radial-gradient(ellipse 60% 50% at 50% 20%, rgba(124,58,237,0.25) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 30% at 80% 70%, rgba(129,140,248,0.15) 0%, transparent 60%);
-      pointer-events: none;
-    }
-    .hero-tag {
-      display: inline-block;
-      background: rgba(124,58,237,0.15);
-      border: 1px solid rgba(124,58,237,0.4);
-      color: var(--soft);
-      font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
-      padding: 0.35rem 1rem; border-radius: 999px;
-      margin-bottom: 1.5rem;
-      animation: fadeUp 0.6s ease both;
-    }
-    header h1 {
-      font-family: 'Outfit', sans-serif;
-      font-size: clamp(2.8rem, 8vw, 5.5rem);
-      font-weight: 700;
-      line-height: 1.05;
-      letter-spacing: -0.02em;
-      background: linear-gradient(135deg, #e0e7ff 0%, var(--soft) 50%, var(--indigo) 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: fadeUp 0.7s 0.1s ease both;
-    }
-    .hero-sub {
-      margin-top: 1rem;
-      color: var(--muted); font-size: 1.1rem;
-      animation: fadeUp 0.7s 0.2s ease both;
-    }
-    .hero-badges {
-      display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem;
-      margin-top: 2rem;
-      animation: fadeUp 0.7s 0.3s ease both;
-    }
-    .badge {
-      background: var(--card);
-      border: 1px solid var(--border);
-      color: var(--soft);
-      font-size: 0.78rem; padding: 0.3rem 0.9rem;
-      border-radius: 999px; letter-spacing: 0.05em;
-    }
-    .badge.green { color: var(--accent); border-color: rgba(52,211,153,0.3); }
-
-    /* SECTIONS */
-    section {
-      max-width: 900px; margin: 0 auto;
-      padding: 5rem 2rem;
-    }
-    .section-label {
-      font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase;
-      color: var(--violet-lt); margin-bottom: 0.5rem;
-    }
-    h2 {
-      font-family: 'Outfit', sans-serif;
-      font-size: clamp(1.8rem, 4vw, 2.4rem);
-      font-weight: 600;
-      color: var(--text); margin-bottom: 1.5rem;
-    }
-    p { color: var(--muted); margin-bottom: 1rem; }
-
-    /* CODE BLOCK */
-    .code-block {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.5rem 2rem;
-      font-family: 'Fira Code', 'Courier New', monospace;
-      font-size: 0.85rem;
-      color: var(--soft);
-      overflow-x: auto;
-      margin-top: 2rem;
-    }
-    .code-block .key { color: var(--indigo); }
-    .code-block .val { color: var(--accent); }
-    .code-block .str { color: #f9a8d4; }
-
-    /* TECH GRID */
-    .tech-group { margin-bottom: 2.5rem; }
-    .tech-group-header {
-      display: flex; align-items: center; gap: 0.6rem;
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-    .tech-group-header h3 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.9rem; font-weight: 600;
-      letter-spacing: 0.05em; text-transform: uppercase;
-      color: var(--soft);
-    }
-    .tech-items { display: flex; flex-direction: column; gap: 0.6rem; }
-    .tech-item {
-      display: flex; align-items: flex-start; gap: 1rem;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 0.8rem 1rem;
-      transition: border-color 0.2s;
-    }
-    .tech-item:hover { border-color: var(--violet-lt); }
-    .tech-item img { height: 22px; flex-shrink: 0; margin-top: 2px; }
-    .tech-item-info { flex: 1; }
-    .tech-item-info strong {
-      display: block;
-      font-size: 0.88rem; font-weight: 500; color: var(--text);
-      margin-bottom: 0.15rem;
-    }
-    .tech-item-info span { font-size: 0.78rem; color: var(--muted); }
-
-    /* PROJECTS */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.2rem;
-      margin-top: 1rem;
-    }
-    .project-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1.5rem;
-      transition: border-color 0.25s, transform 0.25s;
-      text-decoration: none; color: inherit; display: block;
-    }
-    .project-card:hover {
-      border-color: var(--violet-lt);
-      transform: translateY(-3px);
-    }
-    .project-card .icon { font-size: 1.6rem; margin-bottom: 0.8rem; }
-    .project-card h3 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.05rem; font-weight: 600;
-      color: var(--text); margin-bottom: 0.5rem;
-    }
-    .project-card p { font-size: 0.85rem; color: var(--muted); margin: 0 0 1rem; }
-    .project-lang {
-      display: flex; flex-wrap: wrap; gap: 0.4rem;
-      margin-top: 0.8rem;
-    }
-    .project-lang img { height: 22px; }
-    .project-link {
-      display: inline-flex; align-items: center; gap: 0.3rem;
-      margin-top: 0.8rem;
-      font-size: 0.78rem; color: var(--violet-lt);
-      letter-spacing: 0.05em;
-    }
-
-    /* EDUCATION */
-    .edu-item {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.2rem 1.5rem;
-      margin-bottom: 1rem;
-      transition: border-color 0.2s;
-    }
-    .edu-item:hover { border-color: var(--violet-lt); }
-    .edu-item h3 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 1rem; font-weight: 600;
-      color: var(--text); margin-bottom: 0.2rem;
-    }
-    .edu-item .periodo {
-      font-size: 0.78rem; color: var(--violet-lt);
-      margin-bottom: 0.4rem; display: block;
-    }
-    .edu-item p { font-size: 0.85rem; color: var(--muted); margin: 0; }
-
-    /* INTERESTS */
-    .interests-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem; margin-top: 1rem;
-    }
-    .interest-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.2rem 1.5rem;
-      transition: border-color 0.2s;
-    }
-    .interest-card:hover { border-color: var(--soft); }
-    .interest-card .ico { font-size: 1.4rem; margin-bottom: 0.5rem; }
-    .interest-card h3 {
-      font-size: 0.9rem; font-weight: 500;
-      color: var(--text); margin-bottom: 0.3rem;
-    }
-    .interest-card p { font-size: 0.78rem; color: var(--muted); margin: 0; }
-
-    /* DIVIDER */
-    .divider {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 0 2rem;
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 3rem 2rem;
-      color: var(--muted);
-      font-size: 0.82rem;
-      border-top: 1px solid var(--border);
-    }
-    footer a { color: var(--violet-lt); text-decoration: none; }
-    footer a:hover { color: var(--soft); }
-
-    /* ANIMATIONS */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    .reveal {
-      opacity: 0; transform: translateY(24px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .reveal.visible { opacity: 1; transform: none; }
-  </style>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
@@ -317,34 +40,36 @@
     <hr class="divider"/>
 
     <!-- SECCIÓN 1 — INFORMACIÓN PERSONAL -->
-    <section id="sobre-mi" class="reveal">
+    <section id="sobre-mi">
       <p class="section-label">01 — Información personal</p>
       <h2>Sobre mí</h2>
-      <p>Soy estudiante de <strong style="color:var(--soft)">Ingeniería en Computación</strong> en ESPOL (Escuela Superior Politécnica del Litoral), cursando el 6to semestre en la facultad FIEC.</p>
-      <p>Cuento con conocimientos en Python, Java, JavaScript, HTML/CSS, MySQL y MongoDB. Mi principal enfoque es <strong style="color:var(--soft)">Data Science y Machine Learning</strong>, donde trabajo con Pandas, NumPy, Scikit-learn, Jupyter Notebook y Power BI para análisis, modelado y visualización de datos.</p>
+      <p>Soy estudiante de <strong>Ingeniería en Computación</strong> en ESPOL (Escuela Superior Politécnica del Litoral), cursando el 6to semestre en la facultad FIEC.</p>
+      <p>Cuento con conocimientos en Python, Java, JavaScript, HTML/CSS, MySQL y MongoDB. Mi principal enfoque es <strong>Data Science y Machine Learning</strong>, donde trabajo con Pandas, NumPy, Scikit-learn, Jupyter Notebook y Power BI para análisis, modelado y visualización de datos.</p>
       <div class="code-block">
-<span class="key">domenica</span> = {<br>
-&nbsp;&nbsp;<span class="str">"universidad"</span> : <span class="val">"ESPOL — Ing. en Computación (FIEC)"</span>,<br>
-&nbsp;&nbsp;<span class="str">"semestre"</span>    : <span class="val">"6to"</span>,<br>
-&nbsp;&nbsp;<span class="str">"ubicacion"</span>   : <span class="val">"Guayaquil, Ecuador"</span>,<br>
-&nbsp;&nbsp;<span class="str">"enfoque"</span>     : [<span class="val">"Data Science"</span>, <span class="val">"Machine Learning"</span>, <span class="val">"Web Development"</span>],<br>
-&nbsp;&nbsp;<span class="str">"herramientas"</span>: [<span class="val">"Jupyter"</span>, <span class="val">"Power BI"</span>, <span class="val">"SQL"</span>, <span class="val">"Git"</span>],<br>
-&nbsp;&nbsp;<span class="str">"meta"</span>        : <span class="val">"Científica de Datos aplicada a proyectos reales"</span><br>
-}
+        <p>domenica = {</p>
+        <ul>
+          <li>"universidad" : "ESPOL — Ing. en Computación (FIEC)"</li>
+          <li>"semestre"    : "6to"</li>
+          <li>"ubicacion"   : "Guayaquil, Ecuador"</li>
+          <li>"enfoque"     : ["Data Science", "Machine Learning", "Web Development"]</li>
+          <li>"herramientas": ["Jupyter", "Power BI", "SQL", "Git"]</li>
+          <li>"meta"        : "Científica de Datos aplicada a proyectos reales"</li>
+        </ul>
+        <p>}</p>
       </div>
     </section>
 
     <hr class="divider"/>
 
     <!-- SECCIÓN 2 — EDUCACIÓN -->
-    <section id="educacion" class="reveal">
+    <section id="educacion">
       <p class="section-label">02 — Educación</p>
       <h2>Formación Académica</h2>
 
       <div class="edu-item">
         <h3>Ingeniería en Computación</h3>
         <span class="periodo">2023 — Presente · ESPOL, Facultad FIEC · Guayaquil, Ecuador</span>
-        <p>Carrera enfocada en fundamentos de computación, estructuras de datos, algoritmos, redes, bases de datos y desarrollo de software.</p>
+        <p>Carrera enfocada en fundamentos de computación, estructuras de datos, algoritmos, redes, bases de datos y desarrollo de software. GPA: 7.79/10.</p>
       </div>
 
       <div class="edu-item">
@@ -369,54 +94,43 @@
     <hr class="divider"/>
 
     <!-- SECCIÓN 3 — PROYECTOS -->
-    <section id="proyectos" class="reveal">
+    <section id="proyectos">
       <p class="section-label">03 — Proyectos</p>
       <h2>Proyectos Destacados</h2>
+
       <div class="projects-grid">
 
-        <a class="project-card" href="https://github.com/dbolanos-s/net-zero-green-corridors" target="_blank">
+        <div class="project-card">
           <div class="icon">🌱</div>
           <h3>Net Zero Green Corridors</h3>
           <p>Sistema geoespacial con datos satelitales para analizar corredores sostenibles e impacto ambiental.</p>
-          <div class="project-lang">
-            <img src="https://img.shields.io/badge/JavaScript-f7df1e?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript"/>
-            <img src="https://img.shields.io/badge/HTML5-e34f26?style=flat-square&logo=html5&logoColor=white" alt="HTML5"/>
-            <img src="https://img.shields.io/badge/CSS3-1572b6?style=flat-square&logo=css3&logoColor=white" alt="CSS3"/>
-          </div>
-          <span class="project-link">Ver repositorio →</span>
-        </a>
+          <p class="project-lang">JavaScript · HTML5 · CSS3</p>
+          <a href="https://github.com/dbolanos-s/net-zero-green-corridors" target="_blank">Ver repositorio →</a>
+        </div>
 
-        <a class="project-card" href="https://github.com/dbolanos-s/Juego-Interactivo-aplicando-Matem-ticas-Discretas" target="_blank">
+        <div class="project-card">
           <div class="icon">🎮</div>
           <h3>Juego Matemáticas Discretas</h3>
           <p>App interactiva en Python para aplicar grafos, lógica y combinatoria en entorno educativo.</p>
-          <div class="project-lang">
-            <img src="https://img.shields.io/badge/Python-3572A5?style=flat-square&logo=python&logoColor=white" alt="Python"/>
-          </div>
-          <span class="project-link">Ver repositorio →</span>
-        </a>
+          <p class="project-lang">Python</p>
+          <a href="https://github.com/dbolanos-s/Juego-Interactivo-aplicando-Matem-ticas-Discretas" target="_blank">Ver repositorio →</a>
+        </div>
 
-        <a class="project-card" href="https://github.com/dbolanos-s/Proyecto-Estructura-de-Datos-Grupo-04" target="_blank">
+        <div class="project-card">
           <div class="icon">🧱</div>
           <h3>EcoTrack — Estructuras de Datos</h3>
           <p>Sistema de gestión ambiental en Java para registrar, organizar y monitorear residuos.</p>
-          <div class="project-lang">
-            <img src="https://img.shields.io/badge/Java-f89820?style=flat-square&logo=openjdk&logoColor=white" alt="Java"/>
-          </div>
-          <span class="project-link">Ver repositorio →</span>
-        </a>
+          <p class="project-lang">Java</p>
+          <a href="https://github.com/dbolanos-s/Proyecto-Estructura-de-Datos-Grupo-04" target="_blank">Ver repositorio →</a>
+        </div>
 
-        <a class="project-card" href="https://github.com/dbolanos-s/ml-denuncias-consumidor" target="_blank">
+        <div class="project-card">
           <div class="icon">📊</div>
           <h3>ML Denuncias Consumidor</h3>
           <p>Modelo de ML que predice el motivo de denuncias usando 33,052 registros reales con clasificación supervisada.</p>
-          <div class="project-lang">
-            <img src="https://img.shields.io/badge/Python-3572A5?style=flat-square&logo=python&logoColor=white" alt="Python"/>
-            <img src="https://img.shields.io/badge/Scikit--learn-f7931e?style=flat-square&logo=scikit-learn&logoColor=white" alt="Scikit-learn"/>
-            <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="Pandas"/>
-          </div>
-          <span class="project-link">Ver repositorio →</span>
-        </a>
+          <p class="project-lang">Python · Scikit-learn · Pandas</p>
+          <a href="https://github.com/dbolanos-s/ml-denuncias-consumidor" target="_blank">Ver repositorio →</a>
+        </div>
 
       </div>
     </section>
@@ -424,158 +138,50 @@
     <hr class="divider"/>
 
     <!-- SECCIÓN 4 — TECNOLOGÍAS -->
-    <section id="tecnologias" class="reveal">
+    <section id="tecnologias">
       <p class="section-label">04 — Tecnologías</p>
       <h2>Stack Tecnológico</h2>
       <p>Herramientas, lenguajes y frameworks aprendidos durante el curso y aplicados en proyectos reales.</p>
 
-      <div class="tech-group">
-        <div class="tech-group-header">
-          <h3>Lenguajes de Programación</h3>
-        </div>
-        <div class="tech-items">
-          <div class="tech-item">
-            <img src="https://img.shields.io/badge/Python-3572A5?style=flat-square&logo=python&logoColor=white" alt="Python"/>
-            <div class="tech-item-info">
-              <strong>Python</strong>
-              <span>Lenguaje principal para análisis de datos, machine learning y automatización. Usado en el proyecto de clasificación de denuncias y juego de matemáticas discretas.</span>
-            </div>
-          </div>
-          <div class="tech-item">
-            <img src="https://img.shields.io/badge/Java-f89820?style=flat-square&logo=openjdk&logoColor=white" alt="Java"/>
-            <div class="tech-item-info">
-              <strong>Java</strong>
-              <span>Desarrollo de aplicaciones orientadas a objetos. Aplicado en EcoTrack para implementar estructuras de datos como árboles y listas enlazadas.</span>
-            </div>
-          </div>
-          <div class="tech-item">
-            <img src="https://img.shields.io/badge/JavaScript-f7df1e?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript"/>
-            <div class="tech-item-info">
-              <strong>JavaScript</strong>
-              <span>Desarrollo web frontend e interactividad. Utilizado en Net Zero Green Corridors para visualización geoespacial de datos satelitales.</span>
-            </div>
-          </div>
-          <div class="tech-item">
-            <img src="https://img.shields.io/badge/HTML5-e34f26?style=flat-square&logo=html5&logoColor=white" alt="HTML5"/>
-            <div class="tech-item-info">
-              <strong>HTML5 & CSS3</strong>
-              <span>Estructura y diseño de interfaces web. Base del desarrollo frontend en proyectos web y portafolio personal.</span>
-            </div>
-          </div>
-          <div class="tech-item">
-            <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="SQL"/>
-            <div class="tech-item-info">
-              <strong>SQL</strong>
-              <span>Gestión y consulta de bases de datos relacionales. Aplicado en proyectos con MySQL para almacenamiento y recuperación de datos.</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h3>Lenguajes de Programación</h3>
+      <ul>
+        <li><strong>Python</strong> — Análisis de datos, machine learning y automatización.</li>
+        <li><strong>Java</strong> — Aplicaciones orientadas a objetos y estructuras de datos.</li>
+        <li><strong>JavaScript</strong> — Desarrollo web frontend e interactividad.</li>
+        <li><strong>HTML5 & CSS3</strong> — Estructura y diseño de interfaces web.</li>
+        <li><strong>SQL</strong> — Gestión y consulta de bases de datos relacionales.</li>
+      </ul>
 
-      <div class="tech-group">
-        <div class="tech-group-header">
-          <h3>Data Science & Machine Learning</h3>
-        </div>
-        <div class="tech-items">
-          <div class="tech-item">
-            <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="Pandas"/>
-            <div class="tech-item-info">
-              <strong>Pandas</strong>
-              <span>Manipulación y análisis de datos tabulares. Usado para limpiar, transformar y explorar el dataset de 33,052 denuncias de consumidores.</span>
-            </div>
-          </div>
-          <div class="tech-item">
-            <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" alt="NumPy"/>
-            <div class="tech-item-info">
-              <strong>NumPy</strong>
-              <span>Operaciones matemáticas y manejo de arrays multidimensionales. Base del procesamiento numérico en modelos de ML.</span>
-            </div>
-          </div>
-          <div class="tech-item">
-            <img src="https://img.shields.io/badge/Scikit--learn-f7931e?style=flat-square&logo=scikit-learn&logoColor=white" alt="Scikit-learn"/>
-            <div class="tech-item-info">
-              <strong>Scikit-learn</strong>
-              <span>Librería principal para machine learning. Aplicada para entrenar modelos de clasificación supervisada en el proyecto de predicción de denuncias.</span>
-            </div>
-          </div>
-          <div class="tech-item">
-            <img src="https://img.shields.io/badge/Jupyter-f37626?style=flat-square&logo=jupyter&logoColor=white" alt="Jupyter"/>
-            <div class="tech-item-info">
-              <strong>Jupyter Notebook</strong>
-              <span>Entorno interactivo para exploración y análisis de datos (EDA). Permite combinar código, visualizaciones y documentación en un solo lugar.</span>
-            </div>
-          </div>
-          <div class="tech-item">
-            <img src="https://img.shields.io/badge/Power%20BI-f2c811?style=flat-square&logo=powerbi&logoColor=black" alt="Power BI"/>
-            <div class="tech-item-info">
-              <strong>Power BI</strong>
-              <span>Creación de dashboards interactivos e interpretación de resultados. Usado para visualizar métricas y KPIs en proyectos de análisis de datos.</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h3>Data Science & Machine Learning</h3>
+      <ul>
+        <li><strong>Pandas</strong> — Manipulación y análisis de datos tabulares.</li>
+        <li><strong>NumPy</strong> — Operaciones matemáticas y arrays multidimensionales.</li>
+        <li><strong>Scikit-learn</strong> — Modelos de clasificación supervisada.</li>
+        <li><strong>Jupyter Notebook</strong> — Exploración y análisis de datos (EDA).</li>
+        <li><strong>Power BI</strong> — Dashboards interactivos y visualización de resultados.</li>
+      </ul>
 
-      <div class="tech-group">
-        <div class="tech-group-header">
-          <h3>Cloud & Herramientas</h3>
-        </div>
-        <div class="tech-items">
-          <div class="tech-item">
-            <img src="https://img.shields.io/badge/Git-f05032?style=flat-square&logo=git&logoColor=white" alt="Git"/>
-            <div class="tech-item-info">
-              <strong>Git & GitHub</strong>
-              <span>Control de versiones y colaboración en proyectos. Utilizado para gestionar el historial de cambios, ramas y despliegue con GitHub Pages.</span>
-            </div>
-          </div>
-          <div class="tech-item">
-            <img src="https://img.shields.io/badge/AWS-232f3e?style=flat-square&logo=amazonaws&logoColor=white" alt="AWS"/>
-            <div class="tech-item-info">
-              <strong>AWS / Azure / GCP</strong>
-              <span>Exploración de servicios cloud para cómputo, almacenamiento y despliegue de aplicaciones. Aprendidos a través de AWS Educate, Microsoft Learn y Google Skills Boost.</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h3>Cloud & Herramientas</h3>
+      <ul>
+        <li><strong>Git & GitHub</strong> — Control de versiones y despliegue con GitHub Pages.</li>
+        <li><strong>AWS / Azure / GCP</strong> — Servicios cloud para cómputo y almacenamiento.</li>
+      </ul>
     </section>
 
     <hr class="divider"/>
 
     <!-- SECCIÓN 5 — INTERESES -->
-    <section id="intereses" class="reveal">
+    <section id="intereses">
       <p class="section-label">05 — Intereses</p>
       <h2>Áreas de Interés</h2>
-      <div class="interests-grid">
-        <div class="interest-card">
-          <div class="ico">📊</div>
-          <h3>Data Science</h3>
-          <p>Análisis, modelado y visualización de datos para toma de decisiones.</p>
-        </div>
-        <div class="interest-card">
-          <div class="ico">🤖</div>
-          <h3>Machine Learning</h3>
-          <p>Modelos de clasificación, regresión y análisis predictivo.</p>
-        </div>
-        <div class="interest-card">
-          <div class="ico">🔒</div>
-          <h3>Ciberseguridad</h3>
-          <p>Seguridad en dispositivos IoT aplicada a agricultura de precisión.</p>
-        </div>
-        <div class="interest-card">
-          <div class="ico">🌐</div>
-          <h3>Desarrollo Web</h3>
-          <p>Construcción de interfaces y aplicaciones web funcionales.</p>
-        </div>
-        <div class="interest-card">
-          <div class="ico">☁️</div>
-          <h3>Cloud Computing</h3>
-          <p>Exploración de servicios AWS, Azure y GCP.</p>
-        </div>
-        <div class="interest-card">
-          <div class="ico">📱</div>
-          <h3>Desarrollo Android</h3>
-          <p>Aplicaciones móviles con Java.</p>
-        </div>
-      </div>
+      <ul>
+        <li>📊 <strong>Data Science</strong> — Análisis, modelado y visualización de datos.</li>
+        <li>🤖 <strong>Machine Learning</strong> — Modelos de clasificación, regresión y análisis predictivo.</li>
+        <li>🔒 <strong>Ciberseguridad</strong> — Seguridad en dispositivos IoT aplicada a agricultura de precisión.</li>
+        <li>🌐 <strong>Desarrollo Web</strong> — Construcción de interfaces y aplicaciones web funcionales.</li>
+        <li>☁️ <strong>Cloud Computing</strong> — Exploración de servicios AWS, Azure y GCP.</li>
+        <li>📱 <strong>Desarrollo Android</strong> — Aplicaciones móviles con Java.</li>
+      </ul>
     </section>
 
   </main>
@@ -583,21 +189,11 @@
   <!-- FOOTER -->
   <footer>
     <p>Doménica Bolaños · Guayaquil, Ecuador</p>
-    <p style="margin-top:0.5rem">
-      <a href="https://github.com/dbolanos-s" target="_blank">GitHub →</a>
-    </p>
-    <p style="margin-top:1rem; font-size:0.75rem; color:#4b4870">
-      "Los datos son el nuevo petróleo — pero solo si sabes refinarlos."
-    </p>
+    <a href="https://github.com/dbolanos-s" target="_blank">GitHub →</a>
+    <p>"Los datos son el nuevo petróleo — pero solo si sabes refinarlos."</p>
   </footer>
 
-  <script>
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.1 });
-    reveals.forEach(r => observer.observe(r));
-  </script>
+  <script src="script.js"></script>
 
 </body>
 </html>
