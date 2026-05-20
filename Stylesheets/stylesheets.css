@@ -1,0 +1,578 @@
+/* ===================================
+   IMPORTAR GOOGLE FONTS
+   =================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ===================================
+   CURRICULUM VITAE - ESTILOS CSS
+   Doménica Salomé Bolaños Luna
+   Paleta: Púrpura/Violeta
+   =================================== */
+
+/* ===================================
+   REGLAS CSS - I: Selectores Básicos
+   =================================== */
+
+/* Selector universal - Aplica a todos los elementos */
+* {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Selector de elemento - Solo h1 */
+h1 {
+    text-align: center;
+    font-weight: bold;
+    color: #6a0dad; /* Púrpura oscuro */
+    margin: 20px 0;
+}
+
+/* ===================================
+   REGLAS CSS - II: ID y Clases
+   =================================== */
+
+/* Selector por ID - Elemento único */
+#photo {
+    width: 8vw;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+    border: 3px solid #9b59b6; /* Violeta */
+}
+
+/* Selector por clase - Reutilizable */
+.subtitle {
+    color: rgb(123, 104, 238, 0.89); /* Violeta medio */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 1.2em;
+    margin-top: 1.5rem;
+    border-bottom: 2px solid #9b59b6; /* Violeta */
+    padding-bottom: 5px;
+}
+
+/* ===================================
+   REGLAS CSS - III: Descendientes
+   =================================== */
+
+/* Selector descendiente */
+footer p {
+    text-align: right;
+    font-style: italic;
+    font-size: 0.9em;
+    color: #e8daef; /* Violeta muy claro para footer */
+}
+
+/* Selector de hijo directo */
+nav > ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: #9b59b6; /* Violeta */
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav > ul > li > a:hover {
+    background-color: #e8daef; /* Violeta muy claro */
+    border-radius: 5px;
+}
+
+/* ===================================
+   MODELO DE CAJA
+   =================================== */
+
+section {
+    /* Borde */
+    border: 0.2pt solid #d7bde2; /* Violeta claro */
+    
+    /* Margen: arriba derecha abajo izquierda */
+    margin: 4px 2px 8px 2px;
+    
+    /* Relleno: vertical horizontal */
+    padding: 1.5% 0.8%;
+    
+    /* Margen inferior específico */
+    margin-bottom: 1.2rem;
+    
+    /* Borde redondeado */
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    
+    /* Sombra */
+    -webkit-box-shadow: 3px 3px 1px 0px rgba(155, 89, 182, 0.30); /* Sombra violeta */
+    -moz-box-shadow: 3px 3px 1px 0px rgba(155, 89, 182, 0.30);
+    box-shadow: 3px 3px 1px 0px rgba(155, 89, 182, 0.30);
+    
+    /* Fondo blanco */
+    background-color: #ffffff;
+}
+
+/* ===================================
+   ESTILOS ADICIONALES
+   =================================== */
+
+body {
+    background: linear-gradient(135deg, #f5e6ff 0%, #e8daef 100%); /* Degradado violeta suave */
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* ===================================
+   HEADER MEJORADO CON FUENTE LORA
+   =================================== */
+
+header {
+    background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 50%, #c39bd3 100%);
+    color: white;
+    padding: 60px 40px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 30px rgba(142, 68, 173, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de fondo animado */
+header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Hero tag */
+.hero-tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+/* Título principal H1 con fuente LORA */
+header h1 {
+    font-family: 'Lora', serif;
+    font-size: 4em;
+    font-weight: 700;
+    color: white;
+    margin: 20px 0;
+    text-align: center;
+    letter-spacing: -1px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+/* Subtítulo */
+.hero-sub {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin: 15px 0 30px 0;
+    color: rgba(255, 255, 255, 0.95);
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 1;
+}
+
+header p {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+/* Contenedor de badges */
+.hero-badges {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Badges individuales */
+.badge {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 0.9em;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.badge:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.badge.green {
+    background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    font-weight: 600;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+footer {
+    margin-top: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #6a0dad 0%, #8e44ad 100%); /* Degradado púrpura oscuro */
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(106, 13, 173, 0.3);
+    text-align: center;
+}
+
+/* Estilos adicionales para navegación */
+nav {
+    background-color: #f4ecf7; /* Violeta muy claro */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: #6a0dad; /* Púrpura oscuro */
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+nav a:hover {
+    background-color: #9b59b6; /* Violeta */
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Enlaces generales */
+a {
+    color: #8e44ad; /* Púrpura medio */
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #6a0dad; /* Púrpura oscuro */
+}
+
+/* Botones (si tienes) */
+button {
+    background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #6a0dad 0%, #8e44ad 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(142, 68, 173, 0.4);
+}
+
+/* ===================================
+   ESTILOS PARA MAPA Y FORMULARIO
+   =================================== */
+
+/* SECCIÓN: UBICACIÓN / MAPA */
+.map-container {
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(142, 68, 173, 0.2);
+}
+
+.location-info {
+    background: linear-gradient(135deg, #f4ecf7 0%, #e8daef 100%);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    border-left: 4px solid #9b59b6;
+}
+
+.location-info p {
+    margin: 10px 0;
+    color: #6a0dad;
+}
+
+/* SECCIÓN: FORMULARIO DE CONTACTO */
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(142, 68, 173, 0.15);
+    margin: 20px 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #6a0dad;
+    font-weight: 600;
+    font-size: 0.95em;
+}
+
+.required {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #d7bde2;
+    border-radius: 8px;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    transition: all 0.3s;
+    background-color: #fafafa;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #9b59b6;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(155, 89, 182, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.char-count {
+    display: block;
+    margin-top: 5px;
+    color: #8e44ad;
+    font-size: 0.85em;
+    font-style: italic;
+}
+
+/* Checkbox especial */
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    cursor: pointer;
+    accent-color: #9b59b6;
+}
+
+.checkbox-group label {
+    margin: 0;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+/* Botones del formulario */
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.btn-submit,
+.btn-reset {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);
+    color: white;
+    flex: 1;
+    justify-content: center;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(135deg, #6a0dad 0%, #8e44ad 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(142, 68, 173, 0.4);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+.btn-reset {
+    background: #e8daef;
+    color: #6a0dad;
+    border: 2px solid #d7bde2;
+}
+
+.btn-reset:hover {
+    background: #d7bde2;
+    border-color: #9b59b6;
+}
+
+/* Información de contacto alternativa */
+.contact-alt {
+    background: linear-gradient(135deg, #f4ecf7 0%, #e8daef 100%);
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 30px;
+    border-left: 4px solid #9b59b6;
+}
+
+.contact-alt h3 {
+    color: #6a0dad;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.contact-alt ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-alt li {
+    margin: 12px 0;
+    color: #5d3a7a;
+    font-size: 1em;
+}
+
+.contact-alt a {
+    color: #8e44ad;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.contact-alt a:hover {
+    color: #6a0dad;
+    text-decoration: underline;
+}
+
+/* Divisor decorativo */
+.divider {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #9b59b6, transparent);
+    margin: 40px 0;
+}
+
+/* Etiquetas de sección */
+.section-label {
+    font-size: 0.85em;
+    color: #8e44ad;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* ===================================
+   RESPONSIVO PARA MÓVILES
+   =================================== */
+
+@media (max-width: 768px) {
+    header {
+        padding: 40px 20px;
+    }
+    
+    header h1 {
+        font-size: 2.5em;
+    }
+    
+    .hero-sub {
+        font-size: 1em;
+    }
+    
+    .hero-badges {
+        gap: 8px;
+    }
+    
+    .badge {
+        font-size: 0.8em;
+        padding: 8px 14px;
+    }
+    
+    .contact-form {
+        padding: 20px;
+    }
+    
+    .form-buttons {
+        flex-direction: column;
+    }
+    
+    .btn-submit,
+    .btn-reset {
+        width: 100%;
+    }
+    
+    .map-container iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+}
