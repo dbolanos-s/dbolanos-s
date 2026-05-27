@@ -24,9 +24,9 @@
 
   <!-- HEADER -->
   <header>
-    <img id="photo" src="foto.jpg" alt="Foto de perfil de Doménica Bolaños" />
     <span class="hero-tag">Portafolio Personal</span>
     <h1>Doménica Bolaños</h1>
+    <img id="photo" src="foto.jpg" alt="Foto de perfil de Doménica Bolaños" />
     <p class="hero-sub">Estudiante de Ingeniería en Computación · ESPOL · Guayaquil, Ecuador</p>
     <div class="hero-badges">
       <span class="badge">ESPOL — FIEC</span>
@@ -189,29 +189,23 @@
 
     <hr class="divider"/>
 
-    <!-- ===================================
-         SECCIÓN 6 — UBICACIÓN DE PROYECTOS
-         =================================== -->
+    <!-- SECCIÓN 6 — UBICACIÓN -->
     <section id="ubicacion">
       <p class="section-label">06 — Ubicación de Proyectos</p>
       <h2 class="subtitle">Dónde Realicé Mis Proyectos</h2>
-      
       <p>La mayoría de mis proyectos han sido desarrollados en <strong>Guayaquil, Ecuador</strong>, específicamente en las instalaciones de ESPOL - FIEC.</p>
-      
-      <!-- Mapa de Google Maps embebido -->
       <div class="map-container">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.9896523456789!2d-79.9642!3d-2.1448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d8a1e0e8f0f%3A0x1234567890abcdef!2sESPOL%20-%20Escuela%20Superior%20Polit%C3%A9cnica%20del%20Litoral!5e0!3m2!1ses!2sec!4v1234567890123!5m2!1ses!2sec" 
-          width="100%" 
-          height="400" 
-          style="border:0; border-radius: 10px;" 
-          allowfullscreen="" 
-          loading="lazy" 
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.9896523456789!2d-79.9642!3d-2.1448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d8a1e0e8f0f%3A0x1234567890abcdef!2sESPOL%20-%20Escuela%20Superior%20Polit%C3%A9cnica%20del%20Litoral!5e0!3m2!1ses!2sec!4v1234567890123!5m2!1ses!2sec"
+          width="100%"
+          height="400"
+          style="border:0; border-radius: 10px;"
+          allowfullscreen=""
+          loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
           title="Ubicación ESPOL - Guayaquil, Ecuador">
         </iframe>
       </div>
-      
       <div class="location-info">
         <p><strong>📍 Dirección:</strong> ESPOL - Campus Gustavo Galindo, Km 30.5 Vía Perimetral, Guayaquil, Ecuador</p>
         <p><strong>🏛️ Institución:</strong> Escuela Superior Politécnica del Litoral (ESPOL)</p>
@@ -221,42 +215,24 @@
 
     <hr class="divider"/>
 
-    <!-- ===================================
-         SECCIÓN 7 — FORMULARIO DE CONTACTO
-         =================================== -->
+    <!-- SECCIÓN 7 — CONTACTO -->
     <section id="contacto">
       <p class="section-label">07 — Contacto</p>
       <h2 class="subtitle">Contáctame o Envía Recomendaciones</h2>
-      
       <p>¿Tienes alguna pregunta, propuesta de colaboración o recomendación? ¡Me encantaría escucharte! Completa el siguiente formulario y te responderé lo antes posible.</p>
-      
+
       <form class="contact-form" action="https://formspree.io/f/TU_FORMSPREE_ID" method="POST">
-        
-        <!-- Nombre -->
+
         <div class="form-group">
           <label for="nombre">Nombre Completo <span class="required">*</span></label>
-          <input 
-            type="text" 
-            id="nombre" 
-            name="nombre" 
-            placeholder="Ej: Juan Pérez"
-            required
-            minlength="3"
-            maxlength="100">
+          <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required minlength="3" maxlength="100">
         </div>
-        
-        <!-- Email -->
+
         <div class="form-group">
           <label for="email">Correo Electrónico <span class="required">*</span></label>
-          <input 
-            type="email" 
-            id="email" 
-            name="email" 
-            placeholder="Ej: juan.perez@example.com"
-            required>
+          <input type="email" id="email" name="email" placeholder="Ej: juan.perez@example.com" required>
         </div>
-        
-        <!-- Asunto -->
+
         <div class="form-group">
           <label for="asunto">Asunto <span class="required">*</span></label>
           <select id="asunto" name="asunto" required>
@@ -268,46 +244,25 @@
             <option value="otro">Otro</option>
           </select>
         </div>
-        
-        <!-- Mensaje -->
+
         <div class="form-group">
           <label for="mensaje">Mensaje <span class="required">*</span></label>
-          <textarea 
-            id="mensaje" 
-            name="mensaje" 
-            rows="6" 
-            placeholder="Escribe tu mensaje aquí..."
-            required
-            minlength="10"
-            maxlength="1000"></textarea>
+          <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..." required minlength="10" maxlength="1000"></textarea>
           <small class="char-count">Máximo 1000 caracteres</small>
         </div>
-        
-        <!-- Checkbox de consentimiento -->
+
         <div class="form-group checkbox-group">
-          <input 
-            type="checkbox" 
-            id="consentimiento" 
-            name="consentimiento" 
-            required>
-          <label for="consentimiento">
-            Acepto que mis datos sean utilizados para responder a mi consulta <span class="required">*</span>
-          </label>
+          <input type="checkbox" id="consentimiento" name="consentimiento" required>
+          <label for="consentimiento">Acepto que mis datos sean utilizados para responder a mi consulta <span class="required">*</span></label>
         </div>
-        
-        <!-- Botones -->
+
         <div class="form-buttons">
-          <button type="submit" class="btn-submit">
-            <span>📧</span> Enviar Mensaje
-          </button>
-          <button type="reset" class="btn-reset">
-            <span>🔄</span> Limpiar Formulario
-          </button>
+          <button type="submit" class="btn-submit"><span>📧</span> Enviar Mensaje</button>
+          <button type="reset" class="btn-reset"><span>🔄</span> Limpiar Formulario</button>
         </div>
-        
+
       </form>
-      
-      <!-- Información de contacto alternativa -->
+
       <div class="contact-alt">
         <h3>Otras formas de contacto:</h3>
         <ul>
@@ -318,7 +273,6 @@
         </ul>
       </div>
     </section>
-
   </main>
 
   <!-- FOOTER -->
