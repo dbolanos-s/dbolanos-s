@@ -1,10 +1,4 @@
 /* ===================================
-   IMPORTAR GOOGLE FONTS
-   =================================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
-
-/* ===================================
    CURRICULUM VITAE - ESTILOS CSS
    Doménica Salomé Bolaños Luna
    Paleta: Púrpura/Violeta
@@ -16,7 +10,7 @@
 
 /* Selector universal - Aplica a todos los elementos */
 * {
-    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
 }
 
@@ -132,7 +126,7 @@ body {
 }
 
 /* ===================================
-   HEADER MEJORADO CON FUENTE LORA
+   HEADER
    =================================== */
 
 header {
@@ -180,9 +174,9 @@ header::before {
     z-index: 1;
 }
 
-/* Título principal H1 con fuente LORA */
+/* Título principal H1 con fuente serif del sistema */
 header h1 {
-    font-family: 'Lora', serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 4em;
     font-weight: 700;
     color: white;
@@ -196,7 +190,7 @@ header h1 {
 
 /* Subtítulo */
 .hero-sub {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     font-size: 1.2em;
     font-weight: 400;
@@ -375,7 +369,7 @@ button:hover {
     padding: 12px 15px;
     border: 2px solid #d7bde2;
     border-radius: 8px;
-    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1em;
     transition: all 0.3s;
     background-color: #fafafa;
