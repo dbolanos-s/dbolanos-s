@@ -13,13 +13,16 @@
 
   <!-- NAV -->
   <nav>
-    <a href="#sobre-mi">Información</a>
-    <a href="#educacion">Educación</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#tecnologias">Tecnologías</a>
-    <a href="#intereses">Intereses</a>
-    <a href="#ubicacion">Ubicación</a>
-    <a href="#contacto">Contacto</a>
+    <ul>
+      <li><a href="#sobre-mi">Información</a></li>
+      <li><a href="#educacion">Educación</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#tecnologias">Tecnologías</a></li>
+      <li><a href="#intereses">Intereses</a></li>
+      <li><a href="#ubicacion">Ubicación</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
   </nav>
 
   <!-- HEADER -->
@@ -46,8 +49,55 @@
     <section id="sobre-mi">
       <p class="section-label">01 — Información personal</p>
       <h2 class="subtitle">Sobre mí</h2>
-      <p>Soy estudiante de <strong>Ingeniería en Computación</strong> en ESPOL (Escuela Superior Politécnica del Litoral), cursando el 6to semestre en la facultad FIEC.</p>
+      <p>Soy estudiante de <strong>Ingeniería en Computación</strong> en <a href="https://www.espol.edu.ec" target="_blank">ESPOL</a> (Escuela Superior Politécnica del Litoral), cursando el 6to semestre en la facultad FIEC.</p>
       <p>Cuento con conocimientos en Python, Java, JavaScript, HTML/CSS, MySQL y MongoDB. Mi principal enfoque es <strong>Data Science y Machine Learning</strong>, donde trabajo con Pandas, NumPy, Scikit-learn, Jupyter Notebook y Power BI para análisis, modelado y visualización de datos.</p>
+
+      <!-- Lista ordenada -->
+      <h3>Logros destacados</h3>
+      <ol>
+        <li>Cisco Networking Academy — Introduction to Networks (2025)</li>
+        <li>AWS Educate — Getting Started with Cloud Ops — Trained (2025)</li>
+        <li>Certificación de Inglés B1 — Marco Común Europeo (2023)</li>
+      </ol>
+
+      <!-- Lista no ordenada -->
+      <h3>Habilidades blandas</h3>
+      <ul>
+        <li>Trabajo en equipo</li>
+        <li>Resolución de problemas</li>
+        <li>Aprendizaje autónomo</li>
+        <li>Comunicación efectiva</li>
+      </ul>
+
+      <!-- Tabla -->
+      <h3>Resumen académico</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Área</th>
+            <th>Herramienta</th>
+            <th>Nivel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Data Science</td>
+            <td>Pandas / NumPy</td>
+            <td>Intermedio</td>
+          </tr>
+          <tr>
+            <td>Machine Learning</td>
+            <td>Scikit-learn</td>
+            <td>Intermedio</td>
+          </tr>
+          <tr>
+            <td>Visualización</td>
+            <td>Power BI</td>
+            <td>Básico</td>
+          </tr>
+        </tbody>
+      </table>
+
       <div class="code-block">
         <p>domenica = {</p>
         <ul>
@@ -72,19 +122,19 @@
       <div class="edu-item">
         <h3>Ingeniería en Computación</h3>
         <span class="periodo">2023 — Presente · ESPOL, Facultad FIEC · Guayaquil, Ecuador</span>
-        <p>Carrera enfocada en fundamentos de computación, estructuras de datos, algoritmos, redes, bases de datos y desarrollo de software. GPA: 7.79/10.</p>
+        <p>Carrera enfocada en fundamentos de computación, estructuras de datos, algoritmos, redes, bases de datos y desarrollo de software.</p>
       </div>
 
       <div class="edu-item">
         <h3>Cisco Networking Academy — Introduction to Networks</h3>
-        <span class="periodo">2024 · NetAcad</span>
+        <span class="periodo">2025 · NetAcad</span>
         <p>Fundamentos de redes, modelos OSI/TCP-IP, configuración de dispositivos y protocolos de comunicación.</p>
       </div>
 
       <div class="edu-item">
-        <h3>AWS Educate — Cloud Foundations</h3>
-        <span class="periodo">2024 · Amazon Web Services</span>
-        <p>Conceptos fundamentales de computación en la nube, servicios AWS, almacenamiento y seguridad en la nube.</p>
+        <h3>AWS Educate — Getting Started with Cloud Ops</h3>
+        <span class="periodo">2025 · Amazon Web Services · Trained</span>
+        <p>Introducción a operaciones en la nube con AWS, incluyendo servicios de cómputo, almacenamiento y monitoreo.</p>
       </div>
 
       <div class="edu-item">
@@ -115,6 +165,15 @@
           <div class="icon">🎮</div>
           <h3>Juego Matemáticas Discretas</h3>
           <p>App interactiva en Python para aplicar grafos, lógica y combinatoria en entorno educativo.</p>
+          <iframe
+            width="100%"
+            height="200"
+            src="https://www.youtube.com/embed/Kda8nsvr7_Q"
+            title="Juego Matemáticas Discretas - Demostración"
+            allowfullscreen
+            loading="lazy"
+            style="border:0; border-radius: 8px; margin-top: 10px;">
+          </iframe>
           <p class="project-lang">Python</p>
           <a href="https://github.com/dbolanos-s/Juego-Interactivo-aplicando-Matem-ticas-Discretas" target="_blank">Ver repositorio →</a>
         </div>
@@ -151,11 +210,11 @@
         <li><strong>Python</strong> — Análisis de datos, machine learning y automatización.</li>
         <li><strong>Java</strong> — Aplicaciones orientadas a objetos y estructuras de datos.</li>
         <li><strong>JavaScript</strong> — Desarrollo web frontend e interactividad.</li>
-        <li><strong>HTML5 & CSS3</strong> — Estructura y diseño de interfaces web.</li>
+        <li><strong>HTML5 &amp; CSS3</strong> — Estructura y diseño de interfaces web.</li>
         <li><strong>SQL</strong> — Gestión y consulta de bases de datos relacionales.</li>
       </ul>
 
-      <h3>Data Science & Machine Learning</h3>
+      <h3>Data Science &amp; Machine Learning</h3>
       <ul>
         <li><strong>Pandas</strong> — Manipulación y análisis de datos tabulares.</li>
         <li><strong>NumPy</strong> — Operaciones matemáticas y arrays multidimensionales.</li>
@@ -164,9 +223,9 @@
         <li><strong>Power BI</strong> — Dashboards interactivos y visualización de resultados.</li>
       </ul>
 
-      <h3>Cloud & Herramientas</h3>
+      <h3>Cloud &amp; Herramientas</h3>
       <ul>
-        <li><strong>Git & GitHub</strong> — Control de versiones y despliegue con GitHub Pages.</li>
+        <li><strong>Git &amp; GitHub</strong> — Control de versiones y despliegue con GitHub Pages.</li>
         <li><strong>AWS / Azure / GCP</strong> — Servicios cloud para cómputo y almacenamiento.</li>
       </ul>
     </section>
@@ -215,51 +274,63 @@
 
     <hr class="divider"/>
 
-    <!-- SECCIÓN 7 — CONTACTO -->
+    <!-- SECCIÓN 7 — REFERENCIAS -->
+    <section id="referencias">
+      <p class="section-label">07 — Referencias</p>
+      <h2 class="subtitle">Testimonios</h2>
+      <article>
+        <blockquote>"Colaborar con Doménica fue una experiencia enriquecedora; siempre aportó ideas valiosas y soluciones efectivas."</blockquote>
+        <p><strong>Rafael Bolaños</strong> — Compañero de equipo, Proyecto Net Zero Green Corridors. Trabajaron juntos en el desarrollo de herramientas geoespaciales para análisis ambiental.</p>
+      </article>
+    </section>
+
+    <hr class="divider"/>
+
+    <!-- SECCIÓN 8 — CONTACTO -->
     <section id="contacto">
-      <p class="section-label">07 — Contacto</p>
+      <p class="section-label">08 — Contacto</p>
       <h2 class="subtitle">Contáctame o Envía Recomendaciones</h2>
-      <p>¿Tienes alguna pregunta, propuesta de colaboración o recomendación? ¡Me encantaría escucharte! Completa el siguiente formulario y te responderé lo antes posible.</p>
+      <p>¿Tienes alguna pregunta, propuesta de colaboración o recomendación? ¡Me encantaría escucharte!</p>
 
       <form class="contact-form" action="https://formspree.io/f/TU_FORMSPREE_ID" method="POST">
 
-        <div class="form-group">
-          <label for="nombre">Nombre Completo <span class="required">*</span></label>
-          <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required minlength="3" maxlength="100">
-        </div>
+        <label for="nombre">Nombre Completo <span class="required">*</span></label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required minlength="3" maxlength="100">
 
-        <div class="form-group">
-          <label for="email">Correo Electrónico <span class="required">*</span></label>
-          <input type="email" id="email" name="email" placeholder="Ej: juan.perez@example.com" required>
-        </div>
+        <label for="email">Correo Electrónico <span class="required">*</span></label>
+        <input type="email" id="email" name="email" placeholder="Ej: juan.perez@example.com" required>
 
-        <div class="form-group">
-          <label for="asunto">Asunto <span class="required">*</span></label>
-          <select id="asunto" name="asunto" required>
-            <option value="">-- Selecciona una opción --</option>
-            <option value="consulta">Consulta General</option>
-            <option value="colaboracion">Propuesta de Colaboración</option>
-            <option value="recomendacion">Recomendación</option>
-            <option value="oportunidad">Oportunidad Laboral</option>
-            <option value="otro">Otro</option>
-          </select>
-        </div>
+        <label for="asunto">Asunto <span class="required">*</span></label>
+        <select id="asunto" name="asunto" required>
+          <option value="">-- Selecciona una opción --</option>
+          <option value="consulta">Consulta General</option>
+          <option value="colaboracion">Propuesta de Colaboración</option>
+          <option value="recomendacion">Recomendación</option>
+          <option value="oportunidad">Oportunidad Laboral</option>
+          <option value="otro">Otro</option>
+        </select>
 
-        <div class="form-group">
-          <label for="mensaje">Mensaje <span class="required">*</span></label>
-          <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..." required minlength="10" maxlength="1000"></textarea>
-          <small class="char-count">Máximo 1000 caracteres</small>
-        </div>
+        <fieldset>
+          <legend>¿Cómo me conociste? <span class="required">*</span></legend>
+          <label><input type="radio" name="como_conociste" value="github" required> GitHub</label>
+          <label><input type="radio" name="como_conociste" value="linkedin"> LinkedIn</label>
+          <label><input type="radio" name="como_conociste" value="espol"> ESPOL</label>
+          <label><input type="radio" name="como_conociste" value="otro"> Otro</label>
+        </fieldset>
 
-        <div class="form-group checkbox-group">
-          <input type="checkbox" id="consentimiento" name="consentimiento" required>
-          <label for="consentimiento">Acepto que mis datos sean utilizados para responder a mi consulta <span class="required">*</span></label>
-        </div>
+        <fieldset>
+          <legend>Temas de interés</legend>
+          <label><input type="checkbox" name="intereses" value="data_science"> Data Science</label>
+          <label><input type="checkbox" name="intereses" value="ml"> Machine Learning</label>
+          <label><input type="checkbox" name="intereses" value="web"> Desarrollo Web</label>
+          <label><input type="checkbox" name="intereses" value="iot"> IoT / Ciberseguridad</label>
+        </fieldset>
 
-        <div class="form-buttons">
-          <button type="submit" class="btn-submit"><span>📧</span> Enviar Mensaje</button>
-          <button type="reset" class="btn-reset"><span>🔄</span> Limpiar Formulario</button>
-        </div>
+        <label for="mensaje">Mensaje <span class="required">*</span></label>
+        <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..." required minlength="10" maxlength="1000"></textarea>
+
+        <button type="submit">📧 Enviar Mensaje</button>
+        <button type="reset">🔄 Limpiar Formulario</button>
 
       </form>
 
